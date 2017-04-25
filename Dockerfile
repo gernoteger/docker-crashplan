@@ -37,6 +37,13 @@ ENV CRASHPLAN_VERSION=4.8.0 \
     LANGUAGE=en_US.UTF-8
 
 #########################################
+##         TIMEZONE                    ##
+#########################################
+
+RUN apk update && apk add tzdata
+
+
+#########################################
 ##         RUN INSTALL SCRIPT          ##
 #########################################
 ADD /files /tmp/installation
